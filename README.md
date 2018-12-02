@@ -112,9 +112,11 @@ dokku nats:link lolipop playground
 # and the following will be set on the linked application by default
 #
 #   NATS_URL=nats://dokku-nats-lolipop:4222
+#   JDBC_NATS_URL=nats://dokku-nats-lolipop:4222?user=&password=
 #
 # NOTE: the host exposed here only works internally in docker containers. If
 # you want your container to be reachable from outside, you should use `expose`.
+# As well, we shall omit the JDBC url from all following examples for brevity.
 
 # another service can be linked to your app
 dokku nats:link other_service playground
